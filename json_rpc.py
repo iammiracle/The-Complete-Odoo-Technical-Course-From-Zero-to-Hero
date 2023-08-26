@@ -2,10 +2,10 @@ import json
 import random
 import urllib.request
 
-odoo_url = 'http://localhost:8069'
-username = 'admin'
-password = 'admin'
-db = 'theodooguys'
+odoo_url = 'odoo_url'
+username = 'username'
+password = 'password'
+db = 'db_name'
 
 
 def json_rpc(url, method, params):
