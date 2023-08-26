@@ -1,0 +1,88 @@
+<odoo>
+    <data>
+        wkhtmltopdf
+        <template id="report_estate_property_document">
+            <t t-call="web.external_layout">
+                <div class="mt-5">
+                    <div class="page">
+                        <h2>
+                            <span t-field="o.name"/>
+                        </h2>
+
+                        <div id="informations" class="row mt-4 mb-4">
+                            <div class="col-auto col-3">
+                                <strong>Type:</strong>
+                                <p class="m-0" t-field="o.type_id"/>
+                            </div>
+                            <div class="col-auto col-3">
+                                <strong>Postcode:</strong>
+                                <p class="m-0" t-field="o.postcode"/>
+                            </div>
+                            <div class="col-auto col-3">
+                                <strong>Available From:</strong>
+                                <p class="m-0" t-field="o.date_availability"/>
+                            </div>
+                        </div>
+
+                        <div id="price_informations" class="row mt-4 mb-4">
+                            <div class="col-auto col-3">
+                                <strong>Expected Price:</strong>
+                                <p class="m-0" t-field="o.expected_price"/>
+                            </div>
+                            <div class="col-auto col-3">
+                                <strong>Best Offer:</strong>
+                                <p class="m-0" t-field="o.best_offer"/>
+                            </div>
+                            <div class="col-auto col-3">
+                                <strong>Selling Price:</strong>
+                                <p class="m-0" t-field="o.selling_price"/>
+                            </div>
+                        </div>
+
+                        <table class="table table-sm table-borderless">
+                            <thead>
+                                <tr>
+                                    <th class="text-start">Customer</th>
+                                    <th class="text-start">Price</th>
+                                    <th class="text-start">Validity</th>
+                                    <th class="text-start">Deadline</th>
+                                    <th class="text-end">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="o.offer_ids" t-as="offer">
+                                    <tr>
+                                        <td class="text-start">
+                                            <span t-field="offer.partner_id"/>
+                                        </td>
+                                        <td class="text-start">
+                                            <span t-field="offer.price"/>
+                                        </td>
+                                        <td class="text-start">
+                                            <span t-field="offer.validity"/>
+                                        </td>
+                                        <td class="text-start">
+                                            <span t-field="offer.deadline"/>
+                                        </td>
+                                        <td class="text-end">
+                                            <span t-field="offer.status"/>
+                                        </td>
+                                    </tr>
+                                </t>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </t>
+        </template>
+
+        <template id="report_estate_property">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="real_estate_ads.report_estate_property_document"/>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

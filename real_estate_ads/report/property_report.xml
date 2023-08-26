@@ -1,0 +1,16 @@
+<odoo>
+    <data>
+        <record id="property_report_action" model="ir.actions.report">
+            <field name="name">Property Report Action</field>
+            <field name="model">estate.property</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">real_estate_ads.report_estate_property</field>
+            <field name="report_file">real_estate_ads.report_estate_property</field>
+            <field name="print_report_name">(object._get_report_base_filename())</field>
+            <field name="attachment">((object.name)+'.pdf')</field>
+            <field name="binding_model_id" ref="real_estate_ads.model_estate_property"/>
+            <field name="binding_type">report</field>
+            <field name="groups_id" eval="[(4, ref('real_estate_ads.group_property_manager'))]"/>
+        </record>
+    </data>
+</odoo>

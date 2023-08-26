@@ -1,0 +1,21 @@
+<odoo>
+    <data>
+        <record id="real_estate_ads.access_estate_property_type" model="ir.model.access">
+            <field name="group_id" ref="real_estate_ads.group_property_manager"/>
+        </record>
+
+        <record id="real_estate_ads.access_estate_property_tag" model="ir.model.access">
+            <field name="group_id" ref="real_estate_ads.group_property_manager"/>
+        </record>
+
+        <record id="access_estate_property_tag_user" model="ir.model.access">
+            <field name="name">Property tag access for user</field>
+            <field name="model_id" ref="real_estate_ads.model_estate_property_tag"/>
+            <field name="group_id" ref="real_estate_ads.group_property_user"/>
+            <field name="perm_read">1</field>
+            <field name="perm_create">0</field>
+            <field name="perm_write">0</field>
+            <field name="perm_unlink">0</field>
+        </record>
+    </data>
+</odoo>

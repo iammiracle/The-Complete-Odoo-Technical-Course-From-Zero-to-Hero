@@ -1,0 +1,27 @@
+<odoo>
+    <template id="property_list" name="Properties">
+        <t t-call="website.layout">
+            <div class="oe_structure">
+                <div class="container">
+                    <h3>Available Properties</h3>
+                </div>
+                <table class="table-striped table">
+                    <thead>
+                        <tr>
+                            <th>Property Name</th>
+                            <th>Expected Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-foreach="property_ids" t-as="property">
+                            <tr>
+                                <th><span t-esc="property.name"/></th>
+                                <th><span t-esc="property.expected_price"/></th>
+                            </tr>
+                        </t>
+                    </tbody>
+                </table>
+            </div>
+        </t>
+    </template>
+</odoo>
