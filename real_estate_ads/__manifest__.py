@@ -42,8 +42,5 @@
     },
     "installable": True,
     "application": True,
-    "license": "LGPL-3",
-    "currency": "EUR",
-    "price": "59.0",
-    "images": ['/main_screenshot.png']
+    "license": "LGPL-3"
 }
