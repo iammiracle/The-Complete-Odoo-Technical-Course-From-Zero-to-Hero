@@ -87,7 +87,7 @@ class Property(models.Model):
         mail_template = self.env.ref('real_estate_ads.offer_mail_template')
         mail_template.send_mail(self.id, force_send=True)
 
-    def get_emails(self):
+    def _get_emails(self):
         return ','.join(self.offer_ids.mapped('partner_email'))
 
     def _expand_state(self, states, domain, order):
