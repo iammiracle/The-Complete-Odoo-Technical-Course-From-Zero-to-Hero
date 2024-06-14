@@ -124,7 +124,7 @@
             <field name="name">estate.property.calendar</field>
             <field name="model">estate.property</field>
             <field name="arch" type="xml">
-                <calendar date_start="date_availability" string="Properties" mode="month" event_open_popup="true" quick_add="false">
+                <calendar date_start="date_availability" string="Properties" mode="month" event_open_popup="true">
                     <field name="name"/>
                     <field name="date_availability"/>
                     <field name="postcode"/>
@@ -176,8 +176,8 @@
                                     <field name="facades"/>
                                     <field name="garage"/>
                                     <field name="garden"/>
-                                    <field name="garden_area" attrs="{'invisible': [('garden', '=', False)]}"/>
-                                    <field name="garden_orientation" attrs="{'invisible': [('garden', '=', False)]}"/>
+                                    <field name="garden_area" invisible="garden == False"/>
+                                    <field name="garden_orientation" invisible="garden == False"/>
                                     <field name="total_area"/>
 
                                 </group>

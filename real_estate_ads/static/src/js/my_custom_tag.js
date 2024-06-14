@@ -1,16 +1,10 @@
-odoo.define('real_estate_ads.CustomAction', function(require) {
-    "use strict";
+/** @odoo-module **/
+import { registry } from "@web/core/registry";
 
-   var AbstractAction = require('web.AbstractAction');
-   var core = require('web.core');
+import { Component } from "@odoo/owl";
 
-   var CustomAction = AbstractAction.extend({
-        template: "CustomActions",
-        start: function() {
-            console.log("Action")
-        }
-   })
+class MyCustomAction extends Component {}
+MyCustomAction.template = "CustomActions";
 
-   core.action_registry.add("custom_client_action", CustomAction)
+registry.category("actions").add("custom_client_action", MyCustomAction);
 
-});
