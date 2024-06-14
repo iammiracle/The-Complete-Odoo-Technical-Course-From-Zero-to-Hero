@@ -11,4 +11,4 @@ Through a combination of video lectures, hands-on exercises, and real-world exam
 
 To enroll in this course, you need basic knowledge of Python (XML is recommended).
 
-If you're ready to take your odoo development skills to the next level, enroll in "The Complete Odoo Technical Course 2023 : from Zero to Hero" today! - https://t.co/6CO3yQTtRV
+If you're ready to take your odoo development skills to the next level, enroll in "The Complete Odoo Technical Course : from Zero to Hero" today! - https://t.co/6CO3yQTtRV
