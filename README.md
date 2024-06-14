@@ -1,7 +1,7 @@
 # The-Complete-Odoo-Technical-Course-From-Zero-to-Hero
 **This course will be regularly updated with new content and features to ensure that you are aware of the new changes Odoo has introduced.**
 
-Welcome to **"The Complete Odoo Technical Course 2023 : from Zero to Hero"**, the ultimate course for anyone looking to create business applications for Odoo ERP from scratch.
+Welcome to **"The Complete Odoo Technical Course : from Zero to Hero"**, the ultimate course for anyone looking to create business applications for Odoo ERP from scratch.
 
 In this comprehensive course, you will learn the fundamentals of **Odoo Framework**, including **Odoo sh, Reports, IAP Services, XML-RPC & Many More**, and gain practical experience in building applications that you can deploy to production.
 
